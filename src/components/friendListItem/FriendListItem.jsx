@@ -1,10 +1,11 @@
+import { StatusItem, ListItem } from './friendListItem.styled';
 export const FriendListItem = ({ avatar, name, isOnline, id }) => {
   return (
-    <li key={id} className="item">
-      <span className="status">{isOnline}</span>
+    <ListItem key={id} className="item">
+      <StatusItem status={isOnline}></StatusItem>
       <img className="avatar" src={avatar} alt={name} width="48" />
       <p className="name">{name}</p>
-    </li>
+    </ListItem>
   );
 };
 export default FriendListItem;
